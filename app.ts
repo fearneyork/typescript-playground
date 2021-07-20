@@ -50,3 +50,44 @@ let arrMix1 = [1, "a", true];
 let arrMix2: (number | string | boolean)[] = [2, "b", false] // this is 'fine' but it kind of defeats the point of TS
 
 let arrTuple1: [string, number] = ["string", 42] //defines the order that you expect the types in, has to be done for each index
+
+arrTuple1 = ["a different string", 100]
+
+// ----- //
+
+let person = {
+    name: "Harry",
+    age: 24
+}
+
+// ----- //
+//If you're using a union set frequently you can create an alias as shorthand
+type stringOrNum = string | number;
+
+let yearTwo: stringOrNum = 1997;
+year = "2021";
+
+// ----- //
+// FUNCTION DECLARATION
+function calcSum1(a: number, b: number) {
+    return a+b;
+}
+
+calcSum1(2, 2)
+
+function calcSum2(a: number, b: number): number { // the :number at the end means that it is expected a number to be the product of this function
+    return a+b;
+}
+
+calcSum2(2, 2)
+
+//ARROW FUNCTION
+let calcSum3: (a: number, b: number) => number; // defines the function so that it takes two numbers and returns a number
+calcSum3 = (first: number, second: number) {
+    return first + second;
+}
+
+let calcSum4: (a: number, b: number, c?: number) => number; // defines the function so that it takes two numbers and returns a number
+calcSum4 = (first: number, second: number) {
+    return first + second;
+}
