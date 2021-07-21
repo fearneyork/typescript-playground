@@ -91,3 +91,10 @@ let calcSum4: (a: number, b: number, c?: number) => number; // defines the funct
 calcSum4 = (first: number, second: number) {
     return first + second;
 }
+
+
+// ----- // This function returns void, which is distinctly different from null or undefined because they are still returned values, this however is distinctly void
+let sayHi = () => {
+    console.log("Hi");
+    
+}
